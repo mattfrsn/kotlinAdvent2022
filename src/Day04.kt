@@ -5,14 +5,14 @@ fun main() {
         val ranges = input.map { elfAssignments ->
             elfAssignments.asRanges()
         }
-        return ranges.count  { it.first.fullyOverlaps(it.second) || it.second.fullyOverlaps(it.first) }
+        return ranges.count { it.first.fullyOverlaps(it.second) || it.second.fullyOverlaps(it.first) }
     }
 
     fun part2(input: List<String>): Int {
         val ranges = input.map { elfAssignments ->
             elfAssignments.asRanges()
         }
-        return ranges.count  { it.first.overlaps(it.second) || it.second.overlaps(it.first) }
+        return ranges.count { it.first.overlaps(it.second) || it.second.overlaps(it.first) }
     }
 
     val input = File("src/input.txt").readLines()
